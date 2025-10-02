@@ -30,7 +30,10 @@ export const Contact = () => {
 
       <footer className={styles.footer}>
         <div className={styles.credit}>
-          <p>Designed & Built by Niaz Morshed</p>
+          <p>
+            Credits: Brittany Chiang<br />
+            Taken from Showvik Biswas — Modified by Niaz Morshed
+          </p>
         </div>
       </footer>
     </section>
