@@ -35,20 +35,20 @@ export const Hero = () => {
         animate="visible"
       >
         <motion.div className={styles.introText} variants={itemVariants}>
-          Hi, my name is
+          Hi, I am
         </motion.div>
 
         <motion.h1 className={styles.bigHeading} variants={itemVariants}>
-          John Doe.
+          Niaz Morshed.
         </motion.h1>
 
-        <motion.h2 className={styles.bigHeading} variants={itemVariants}>
-          I build things for the web.
-        </motion.h2>
+        <motion.h3 className={styles.subtitle} variants={itemVariants}>
+          Full Stack Developer.
+        </motion.h3>
 
         <motion.p className={styles.description} variants={itemVariants}>
-          I'm a software engineer specializing in building (and occasionally designing) exceptional
-          digital experiences. Currently, I'm focused on building accessible, human-centered products.
+          I'm a full-stack developer with experience using React and NodeJS. 
+          Passionate about building exceptional digital experiences and solving complex problems through code.
         </motion.p>
 
         <motion.div className={styles.buttonGroup} variants={itemVariants}>
@@ -56,6 +56,17 @@ export const Hero = () => {
             Check out my work!
           </a>
         </motion.div>
+      </motion.div>
+
+      <motion.div
+        className={styles.imageContainer}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.8 }}
+      >
+        <div className={styles.imageWrapper}>
+          <img src="/profile.jpg" alt="Niaz Morshed" className={styles.profileImage} />
+        </div>
       </motion.div>
     </section>
   );

@@ -41,9 +41,7 @@ export const Navbar = () => {
       variants={navVariants}
     >
       <a className={styles.logo} href="/">
-        <span className={styles.logoAccent}>{"<"}</span>
-        Portfolio
-        <span className={styles.logoAccent}>{" />"}</span>
+        <img src="/name2.png" alt="N" className={styles.logoImage} />
       </a>
 
       <button 
@@ -61,22 +59,22 @@ export const Navbar = () => {
       <ul className={`${styles.menuItems} ${menuOpen ? styles.menuOpen : ""}`}>
         <li>
           <a href="#about" onClick={() => setMenuOpen(false)}>
-            <span className={styles.navNumber}>01.</span> About
+            About
           </a>
         </li>
         <li>
           <a href="#experience" onClick={() => setMenuOpen(false)}>
-            <span className={styles.navNumber}>02.</span> Experience
+            Experience
           </a>
         </li>
         <li>
           <a href="#projects" onClick={() => setMenuOpen(false)}>
-            <span className={styles.navNumber}>03.</span> Projects
+            Projects
           </a>
         </li>
         <li>
           <a href="#contact" onClick={() => setMenuOpen(false)}>
-            <span className={styles.navNumber}>04.</span> Contact
+            Contact
           </a>
         </li>
         <li>

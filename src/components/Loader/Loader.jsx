@@ -48,7 +48,7 @@ export const Loader = ({ onLoadComplete }) => {
           />
           <motion.text
             x="50%"
-            y="50%"
+            y="48%"
             dominantBaseline="middle"
             textAnchor="middle"
             className={styles.logoText}
