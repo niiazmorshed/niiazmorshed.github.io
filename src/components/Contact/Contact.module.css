@@ -1,0 +1,125 @@
+@import "../../vars.css";
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-section) var(--spacing-xxl);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 600px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.overline {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: var(--fz-md);
+  font-weight: 400;
+  margin-bottom: var(--spacing-md);
+}
+
+.sectionNumber {
+  margin-right: var(--spacing-xs);
+}
+
+.title {
+  font-size: clamp(40px, 5vw, 60px);
+  font-weight: 600;
+  color: var(--color-lightest-slate);
+  margin-bottom: var(--spacing-md);
+}
+
+.description {
+  color: var(--color-slate);
+  font-size: var(--fz-lg);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-xl);
+  max-width: 540px;
+}
+
+.emailButton {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-accent);
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--border-radius-sm);
+  padding: 1.25rem 1.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  margin-top: var(--spacing-xl);
+}
+
+.emailButton:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -15px rgba(100, 255, 218, 0.4);
+}
+
+.footer {
+  margin-top: var(--spacing-xxl);
+  padding-top: var(--spacing-xl);
+  padding-bottom: var(--spacing-md);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.credit {
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  color: var(--color-slate);
+  text-align: center;
+}
+
+.credit p {
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: var(--spacing-xxl) var(--spacing-md);
+    min-height: auto;
+  }
+
+  .title {
+    font-size: clamp(30px, 8vw, 50px);
+  }
+
+  .description {
+    font-size: var(--fz-md);
+  }
+
+  .emailButton {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: var(--spacing-xl) var(--spacing-sm);
+  }
+
+  .title {
+    font-size: clamp(26px, 10vw, 40px);
+  }
+
+  .emailButton {
+    padding: 0.875rem 1.25rem;
+    font-size: var(--fz-xs);
+  }
+}

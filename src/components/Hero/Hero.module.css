@@ -1,0 +1,128 @@
+@import "../../vars.css";
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 var(--spacing-xxl);
+  position: relative;
+}
+
+.content {
+  max-width: 1000px;
+  width: 100%;
+}
+
+.introText {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: clamp(var(--fz-sm), 5vw, var(--fz-md));
+  margin-bottom: var(--spacing-md);
+  font-weight: 400;
+}
+
+.bigHeading {
+  font-size: clamp(40px, 8vw, 80px);
+  font-weight: 600;
+  color: var(--color-lightest-slate);
+  line-height: 1.1;
+  margin: 0;
+}
+
+.bigHeading:first-of-type {
+  margin-bottom: 10px;
+}
+
+.bigHeading:nth-of-type(2) {
+  color: var(--color-slate);
+  margin-bottom: var(--spacing-md);
+}
+
+.description {
+  max-width: 540px;
+  font-size: var(--fz-xl);
+  color: var(--color-slate);
+  line-height: 1.5;
+  margin: var(--spacing-lg) 0;
+}
+
+.buttonGroup {
+  margin-top: var(--spacing-xl);
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
+}
+
+.primaryBtn {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-accent);
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  border-radius: var(--border-radius-sm);
+  padding: 1.25rem 1.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  line-height: 1;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.primaryBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--color-accent);
+  opacity: 0;
+  z-index: -1;
+  transition: opacity var(--transition-fast);
+}
+
+.primaryBtn:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px -15px rgba(100, 255, 218, 0.4);
+}
+
+.primaryBtn:active {
+  transform: translateY(-1px);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 0 var(--spacing-md);
+    min-height: calc(100vh - 80px);
+  }
+
+  .bigHeading {
+    font-size: clamp(30px, 8vw, 60px);
+  }
+
+  .description {
+    font-size: var(--fz-lg);
+  }
+
+  .primaryBtn {
+    padding: 1rem 1.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 0 var(--spacing-sm);
+  }
+
+  .bigHeading {
+    font-size: clamp(28px, 10vw, 50px);
+  }
+
+  .description {
+    font-size: var(--fz-md);
+  }
+}

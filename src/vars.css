@@ -1,0 +1,62 @@
+:root {
+  /* Dark Theme Colors - Deep Blue High Contrast */
+  --color-bg-primary: #000814;
+  --color-bg-secondary: #001d3d;
+  --color-bg-tertiary: #003566;
+  --color-text-primary: #e8f1ff;
+  --color-text-secondary: #94a3b8;
+  --color-text-highlight: #00d9ff;
+  --color-accent: #00d9ff;
+  --color-accent-secondary: #00b4d8;
+  --color-white: #f8fafc;
+  --color-slate: #94a3b8;
+  --color-light-slate: #cbd5e1;
+  --color-lightest-slate: #e8f1ff;
+
+  /* Typography */
+  --font-primary: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-secondary: "Outfit", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+
+  /* Font Sizes */
+  --fz-xxs: 12px;
+  --fz-xs: 13px;
+  --fz-sm: 14px;
+  --fz-md: 16px;
+  --fz-lg: 18px;
+  --fz-xl: 20px;
+  --fz-xxl: 22px;
+  --fz-heading: 32px;
+  --fz-hero: clamp(40px, 8vw, 80px);
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-sm: 16px;
+  --spacing-md: 24px;
+  --spacing-lg: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+  --spacing-section: 100px;
+
+  /* Border Radius */
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --border-radius-lg: 12px;
+
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --shadow-lg: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+
+  /* Z-Index */
+  --z-navbar: 1000;
+  --z-modal: 2000;
+  --z-tooltip: 3000;
+}

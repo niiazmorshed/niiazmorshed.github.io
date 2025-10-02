@@ -1,0 +1,213 @@
+@import "../../vars.css";
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: var(--spacing-section) var(--spacing-xxl);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  font-weight: 600;
+  color: var(--color-lightest-slate);
+  margin-bottom: var(--spacing-xl);
+  white-space: nowrap;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  margin-left: var(--spacing-md);
+  background-color: var(--color-bg-tertiary);
+}
+
+.sectionNumber {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+  font-weight: 400;
+  margin-right: var(--spacing-sm);
+}
+
+.content {
+  display: flex;
+  gap: var(--spacing-lg);
+  min-height: 350px;
+}
+
+.tabList {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  position: relative;
+}
+
+.tabList::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-bg-tertiary);
+}
+
+.tabButton {
+  background: none;
+  border: none;
+  text-align: left;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  color: var(--color-slate);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-left: 2px solid transparent;
+  position: relative;
+  white-space: nowrap;
+}
+
+.tabButton:hover {
+  background-color: rgba(100, 255, 218, 0.1);
+  color: var(--color-accent);
+}
+
+.tabButton.activeTab {
+  color: var(--color-accent);
+  background-color: rgba(100, 255, 218, 0.1);
+}
+
+.tabButton.activeTab::before {
+  content: "";
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--color-accent);
+  z-index: 1;
+}
+
+.tabPanel {
+  flex: 1;
+  padding-left: var(--spacing-lg);
+}
+
+.jobTitle {
+  font-size: var(--fz-xxl);
+  font-weight: 500;
+  color: var(--color-lightest-slate);
+  margin-bottom: var(--spacing-xs);
+}
+
+.company {
+  color: var(--color-accent);
+}
+
+.duration {
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  color: var(--color-slate);
+  margin-bottom: var(--spacing-lg);
+}
+
+.responsibilities {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.responsibilities li {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-slate);
+  font-size: var(--fz-lg);
+  line-height: 1.5;
+}
+
+.responsibilities li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-size: var(--fz-md);
+  line-height: 1.5;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: var(--spacing-xxl) var(--spacing-md);
+    min-height: auto;
+  }
+
+  .title::after {
+    width: 100px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+
+  .tabList {
+    flex-direction: row;
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: var(--spacing-md);
+  }
+
+  .tabList::before {
+    top: auto;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+  }
+
+  .tabButton {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .tabButton.activeTab::before {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+  }
+
+  .tabPanel {
+    padding-left: 0;
+  }
+
+  .responsibilities li {
+    font-size: var(--fz-md);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title::after {
+    width: 50px;
+  }
+
+  .jobTitle {
+    font-size: var(--fz-xl);
+  }
+
+  .tabButton {
+    font-size: var(--fz-xs);
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+}

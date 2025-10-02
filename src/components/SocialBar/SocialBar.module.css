@@ -1,0 +1,63 @@
+@import "../../vars.css";
+
+.socialBar {
+  position: fixed;
+  left: var(--spacing-xl);
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.socialList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-md);
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: var(--spacing-md);
+}
+
+.socialList li {
+  margin: 0;
+}
+
+.socialList a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xs);
+  color: var(--color-light-slate);
+  transition: all var(--transition-fast);
+}
+
+.socialList a:hover {
+  color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.socialList svg {
+  width: 20px;
+  height: 20px;
+}
+
+.verticalLine {
+  width: 1px;
+  background-color: var(--color-light-slate);
+  margin-top: var(--spacing-sm);
+}
+
+@media screen and (max-width: 1080px) {
+  .socialBar {
+    left: var(--spacing-md);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .socialBar {
+    display: none;
+  }
+}

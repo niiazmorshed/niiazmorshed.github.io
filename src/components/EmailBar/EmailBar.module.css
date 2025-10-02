@@ -1,0 +1,46 @@
+@import "../../vars.css";
+
+.emailBar {
+  position: fixed;
+  right: var(--spacing-xl);
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.emailLink {
+  writing-mode: vertical-rl;
+  font-family: var(--font-mono);
+  font-size: var(--fz-xs);
+  letter-spacing: 0.1em;
+  color: var(--color-light-slate);
+  text-decoration: none;
+  margin-bottom: var(--spacing-md);
+  transition: all var(--transition-fast);
+  padding: var(--spacing-xs);
+}
+
+.emailLink:hover {
+  color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+.verticalLine {
+  width: 1px;
+  background-color: var(--color-light-slate);
+  margin-top: var(--spacing-sm);
+}
+
+@media screen and (max-width: 1080px) {
+  .emailBar {
+    right: var(--spacing-md);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .emailBar {
+    display: none;
+  }
+}

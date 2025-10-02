@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Escape The Matrix",
+    "imageSrc": "projects/emx.png",
+    "description": "This project can help you to gain skills.There is a admin dashboard, teacher dashboard and a user dashboard.",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://first-project-308dc.web.app/",
+    "source": "https://github.com/niiazmorshed/Escape-The-Matrix"
+  },
+  {
+    "title": "Make a difference",
+    "imageSrc": "projects/mad.png",
+    "description": "Here you can manage volunteer for social work, you can be a volunteer also and get other workers who are eager to help.",
+    "skills": ["React", "Express", "Express"],
+    "demo": "https://assignment-11-d16d9.web.app/",
+    "source": "https://github.com/niiazmorshed/Make-a-Difference"
+  },
+  {
+    "title": "Draw Life",
+    "imageSrc": "projects/draw.png",
+    "description": "Find your favourite paint from here, Here you will find some amazing art and can and get them through our website  ",
+    "skills": ["React", "Express", "Node"],
+    "demo": "https://assignment-10-7cf16.web.app/",
+    "source": "https://github.com/niiazmorshed/Draw-Life"
+  }
+]

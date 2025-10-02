@@ -1,0 +1,65 @@
+@import "../../vars.css";
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: var(--spacing-section) var(--spacing-xxl);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  font-weight: 600;
+  color: var(--color-lightest-slate);
+  margin-bottom: var(--spacing-xxl);
+  white-space: nowrap;
+}
+
+.title::after {
+  content: "";
+  display: block;
+  width: 300px;
+  height: 1px;
+  margin-left: var(--spacing-md);
+  background-color: var(--color-bg-tertiary);
+}
+
+.sectionNumber {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: clamp(var(--fz-md), 3vw, var(--fz-xl));
+  font-weight: 400;
+  margin-right: var(--spacing-sm);
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xxl);
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: var(--spacing-xxl) var(--spacing-md);
+    min-height: auto;
+  }
+
+  .title::after {
+    width: 100px;
+  }
+
+  .projects {
+    gap: var(--spacing-xl);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .title::after {
+    width: 50px;
+  }
+}

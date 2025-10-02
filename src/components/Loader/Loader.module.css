@@ -1,0 +1,62 @@
+@import "../../vars.css";
+
+.loaderContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.loaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  color: var(--color-accent);
+  filter: drop-shadow(0 0 20px rgba(0, 217, 255, 0.5));
+  display: block;
+}
+
+.logoText {
+  font-size: 72px;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  fill: var(--color-accent);
+  letter-spacing: -2px;
+}
+
+@media screen and (max-width: 768px) {
+  .logo {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logoText {
+    font-size: 56px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .logoText {
+    font-size: 48px;
+  }
+}
