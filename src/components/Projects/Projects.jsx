@@ -6,28 +6,28 @@ import styles from "./Projects.module.css";
 export const Projects = () => {
   const projects = [
     {
-      title: "E-Commerce Platform",
-      description: "A full-stack e-commerce platform with payment integration, product management, and user authentication.",
-      imageSrc: "projects/project.png",
-      skills: ["React", "Node.js", "MongoDB", "Stripe"],
-      demo: "#",
-      source: "#"
+      title: "Escape The Matrix",
+      description: "A comprehensive, full-stack Learning Management System (LMS) with role-based access control, course management, and a complete assessment system featuring assignments, quizzes, and discussions.",
+      imageSrc: "/project_1.png",
+      skills: ["React", "Node.js", "MongoDB", "Express.js", "Firebase", "TailwindCSS"],
+      demo: "https://escape-the-matrix-id9n.vercel.app/",
+      source: "https://github.com/niiazmorshed/Escape-The-Matrix"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management application with real-time updates and team features.",
-      imageSrc: "projects/assignment.png",
-      skills: ["TypeScript", "Next.js", "PostgreSQL"],
-      demo: "#",
-      source: "#"
+      title: "Digital Healthcare Assistant",
+      description: "A modern healthcare platform designed to provide digital health services and assistance to patients and healthcare providers.",
+      imageSrc: "/project_2.png",
+      skills: ["React", "Node.js", "MongoDB", "Express.js"],
+      demo: "https://digital-healthcare-assistant.vercel.app/",
+      source: "https://github.com/niiazmorshed/Digital-Healthcare-Assistant"
     },
     {
-      title: "Weather Dashboard",
-      description: "An interactive weather dashboard with forecasts, maps, and personalized alerts.",
-      imageSrc: "projects/gym.png",
-      skills: ["React", "API Integration", "Charts"],
-      demo: "#",
-      source: "#"
+      title: "LagbeMart",
+      description: "An e-commerce platform for seamless online shopping experience with product management, cart functionality, and user authentication.",
+      imageSrc: "/project_3.png",
+      skills: ["React", "Node.js", "MongoDB", "Express.js"],
+      demo: "https://lagbe-mart-v5fh.vercel.app/",
+      source: "https://github.com/niiazmorshed/LagbeMart"
     }
   ];
 
