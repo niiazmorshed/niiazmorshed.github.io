@@ -39,108 +39,135 @@
 
 .content {
   display: flex;
-  gap: var(--spacing-lg);
-  min-height: 350px;
-}
-
-.tabList {
-  display: flex;
   flex-direction: column;
-  width: 200px;
-  position: relative;
+  gap: var(--spacing-xxl);
 }
 
-.tabList::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  width: 2px;
+.sectionSubtitle {
+  font-size: var(--fz-xl);
+  font-weight: 600;
+  color: var(--color-lightest-slate);
+  margin-bottom: var(--spacing-lg);
+  font-family: var(--font-mono);
+}
+
+.certificatesSection,
+.profilesSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.certificatesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-xl);
+  margin-top: var(--spacing-lg);
+}
+
+.certificateCard {
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-bg-tertiary);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-normal);
+}
+
+.certificateCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 30px -15px rgba(0, 217, 255, 0.2);
+}
+
+.certificateImageWrapper {
+  width: 100%;
+  margin-bottom: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
   background-color: var(--color-bg-tertiary);
 }
 
-.tabButton {
-  background: none;
-  border: none;
-  text-align: left;
-  padding: var(--spacing-sm) var(--spacing-md);
-  font-family: var(--font-mono);
-  font-size: var(--fz-sm);
-  color: var(--color-slate);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-  border-left: 2px solid transparent;
-  position: relative;
-  white-space: nowrap;
+.certificateImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform var(--transition-normal);
 }
 
-.tabButton:hover {
-  background-color: rgba(100, 255, 218, 0.1);
-  color: var(--color-accent);
+.certificateCard:hover .certificateImage {
+  transform: scale(1.05);
 }
 
-.tabButton.activeTab {
-  color: var(--color-accent);
-  background-color: rgba(100, 255, 218, 0.1);
-}
-
-.tabButton.activeTab::before {
-  content: "";
-  position: absolute;
-  left: -2px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background-color: var(--color-accent);
-  z-index: 1;
-}
-
-.tabPanel {
-  flex: 1;
-  padding-left: var(--spacing-lg);
-}
-
-.jobTitle {
-  font-size: var(--fz-xxl);
-  font-weight: 500;
+.certificateName {
+  font-size: var(--fz-xl);
+  font-weight: 600;
   color: var(--color-lightest-slate);
   margin-bottom: var(--spacing-xs);
 }
 
-.company {
-  color: var(--color-accent);
-}
-
-.duration {
-  font-family: var(--font-mono);
-  font-size: var(--fz-xs);
-  color: var(--color-slate);
-  margin-bottom: var(--spacing-lg);
-}
-
-.responsibilities {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.responsibilities li {
-  position: relative;
-  padding-left: var(--spacing-lg);
-  margin-bottom: var(--spacing-sm);
-  color: var(--color-slate);
-  font-size: var(--fz-lg);
-  line-height: 1.5;
-}
-
-.responsibilities li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--color-accent);
+.certificateDescription {
   font-size: var(--fz-md);
-  line-height: 1.5;
+  color: var(--color-slate);
+  line-height: 1.6;
+}
+
+.profilesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-lg);
+}
+
+.profileCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  background-color: var(--color-bg-secondary);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--color-bg-tertiary);
+  text-decoration: none;
+  transition: all var(--transition-normal);
+  min-height: 200px;
+}
+
+.profileCard:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-accent);
+  box-shadow: 0 10px 30px -15px rgba(0, 217, 255, 0.2);
+}
+
+.profileIcon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profileIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.profilePlatform {
+  font-size: var(--fz-xl);
+  font-weight: 600;
+  color: var(--color-lightest-slate);
+  margin-bottom: var(--spacing-sm);
+  font-family: var(--font-mono);
+}
+
+.profileLink {
+  font-size: var(--fz-sm);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  transition: transform var(--transition-fast);
+}
+
+.profileCard:hover .profileLink {
+  transform: translateX(5px);
 }
 
 @media screen and (max-width: 768px) {
@@ -153,47 +180,19 @@
     width: 100px;
   }
 
-  .content {
-    flex-direction: column;
+  .certificatesGrid,
+  .profilesGrid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-lg);
   }
 
-  .tabList {
-    flex-direction: row;
-    width: 100%;
-    overflow-x: auto;
-    margin-bottom: var(--spacing-md);
+  .sectionSubtitle {
+    font-size: var(--fz-lg);
   }
 
-  .tabList::before {
-    top: auto;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-  }
-
-  .tabButton {
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    padding: var(--spacing-sm) var(--spacing-md);
-  }
-
-  .tabButton.activeTab::before {
-    left: 0;
-    right: 0;
-    top: auto;
-    bottom: -2px;
-    width: 100%;
-    height: 2px;
-  }
-
-  .tabPanel {
-    padding-left: 0;
-  }
-
-  .responsibilities li {
-    font-size: var(--fz-md);
+  .certificateName,
+  .profilePlatform {
+    font-size: var(--fz-lg);
   }
 }
 
@@ -202,12 +201,22 @@
     width: 50px;
   }
 
-  .jobTitle {
-    font-size: var(--fz-xl);
+  .certificatesGrid,
+  .profilesGrid {
+    grid-template-columns: 1fr;
   }
 
-  .tabButton {
-    font-size: var(--fz-xs);
-    padding: var(--spacing-xs) var(--spacing-sm);
+  .certificateCard,
+  .profileCard {
+    padding: var(--spacing-md);
+  }
+
+  .profileCard {
+    min-height: 150px;
+  }
+
+  .profileIcon {
+    width: 50px;
+    height: 50px;
   }
 }

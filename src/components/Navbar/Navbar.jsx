@@ -78,7 +78,14 @@ export const Navbar = () => {
           </a>
         </li>
         <li>
-          <a href="#resume" className={styles.resumeBtn} onClick={() => setMenuOpen(false)}>
+          <a 
+            href="/Niaz-Morshed-Resume .pdf" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            download="Niaz-Morshed-Resume.pdf"
+            className={styles.resumeBtn} 
+            onClick={() => setMenuOpen(false)}
+          >
             Resume
           </a>
         </li>
