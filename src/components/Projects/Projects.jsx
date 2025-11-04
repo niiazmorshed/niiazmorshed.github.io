@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import React from "react";
-import { ProjectCard } from "./ProjectCard";
+import { FeaturedProject } from "./FeaturedProject";
 import styles from "./Projects.module.css";
 
 export const Projects = () => {
@@ -53,15 +53,13 @@ export const Projects = () => {
           <span className={styles.sectionNumber}>03.</span> Some Things I've Built
         </h2>
 
-        <motion.div
-          className={styles.projects}
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-        >
+        <motion.div variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>
           {projects.map((project, id) => (
-            <ProjectCard key={id} project={project} index={id} />
+            <FeaturedProject
+              key={id}
+              project={project}
+              align={id % 2 === 0 ? "right" : "left"}
+            />
           ))}
         </motion.div>
       </motion.div>

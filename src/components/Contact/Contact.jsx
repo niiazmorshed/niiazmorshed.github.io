@@ -12,10 +12,6 @@ export const Contact = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <p className={styles.overline}>
-          <span className={styles.sectionNumber}>04.</span> What's Next?
-        </p>
-        
         <h2 className={styles.title}>Get In Touch</h2>
         
         <p className={styles.description}>

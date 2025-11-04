@@ -42,6 +42,16 @@ export const SocialBar = () => {
           <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
         </svg>
       )
+    },
+    {
+      name: "LeetCode",
+      url: "https://leetcode.com/u/niiazmorshed/",
+      icon: (<span className={styles.textIcon}>L</span>)
+    },
+    {
+      name: "Codeforces",
+      url: "https://codeforces.com/profile/niazmorshedrafi",
+      icon: (<span className={styles.textIcon}>C</span>)
     }
   ];
 

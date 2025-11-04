@@ -43,6 +43,12 @@
   gap: var(--spacing-xxl);
 }
 
+.paragraph {
+  color: var(--color-slate);
+  font-size: var(--fz-lg);
+  line-height: 1.6;
+}
+
 .sectionSubtitle {
   font-size: var(--fz-xl);
   font-weight: 600;
