@@ -23,15 +23,6 @@ export const Contact = () => {
           Say Hello
         </a>
       </motion.div>
-
-      <footer className={styles.footer}>
-        <div className={styles.credit}>
-          <p>
-            Credits: Brittany Chiang<br />
-            Taken from Showvik Biswas — Modified by Niaz Morshed
-          </p>
-        </div>
-      </footer>
     </section>
   );
 };
