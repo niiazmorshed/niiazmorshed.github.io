@@ -40,141 +40,145 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xxl);
 }
 
-.paragraph {
-  color: var(--color-slate);
-  font-size: var(--fz-lg);
-  line-height: 1.6;
-}
-
-.sectionSubtitle {
-  font-size: var(--fz-xl);
-  font-weight: 600;
-  color: var(--color-lightest-slate);
-  margin-bottom: var(--spacing-lg);
-  font-family: var(--font-mono);
-}
-
-.certificatesSection,
-.profilesSection {
-  margin-bottom: var(--spacing-xl);
-}
-
-.certificatesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.tabsContainer {
+  display: flex;
   gap: var(--spacing-xl);
-  margin-top: var(--spacing-lg);
+  position: relative;
 }
 
-.certificateCard {
-  background-color: var(--color-bg-secondary);
-  border-radius: var(--border-radius-md);
-  border: 1px solid var(--color-bg-tertiary);
-  padding: var(--spacing-lg);
-  transition: all var(--transition-normal);
+.tabsList {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+  border-left: 2px solid var(--color-bg-tertiary);
+  padding-left: 0;
 }
 
-.certificateCard:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-accent);
-  box-shadow: 0 10px 30px -15px rgba(0, 217, 255, 0.2);
+.tab {
+  background: none;
+  border: none;
+  padding: var(--spacing-md) var(--spacing-lg);
+  text-align: left;
+  color: var(--color-slate);
+  font-size: var(--fz-sm);
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+  position: relative;
 }
 
-.certificateImageWrapper {
-  width: 100%;
-  margin-bottom: var(--spacing-md);
-  border-radius: var(--border-radius-sm);
-  overflow: hidden;
-  background-color: var(--color-bg-tertiary);
+.tab:hover {
+  color: var(--color-accent);
+  background-color: rgba(100, 255, 218, 0.05);
 }
 
-.certificateImage {
-  width: 100%;
-  height: auto;
-  display: block;
-  transition: transform var(--transition-normal);
+.tabActive {
+  color: var(--color-accent);
+  border-left-color: var(--color-accent);
+  background-color: rgba(100, 255, 218, 0.1);
 }
 
-.certificateCard:hover .certificateImage {
-  transform: scale(1.05);
+.tabContent {
+  flex: 1;
+  padding-left: var(--spacing-xl);
 }
 
-.certificateName {
-  font-size: var(--fz-xl);
+.jobTitle {
+  font-size: var(--fz-xxl);
   font-weight: 600;
   color: var(--color-lightest-slate);
   margin-bottom: var(--spacing-xs);
 }
 
-.certificateDescription {
-  font-size: var(--fz-md);
+.companyLink {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.companyLink::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: var(--color-accent);
+  transition: width var(--transition-fast);
+}
+
+.companyLink:hover::after {
+  width: 100%;
+}
+
+.dateRange {
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
   color: var(--color-slate);
+  margin-top: var(--spacing-xs);
+}
+
+.experienceList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.experienceItem {
+  position: relative;
+  padding-left: var(--spacing-lg);
+  color: var(--color-slate);
+  font-size: var(--fz-md);
   line-height: 1.6;
 }
 
-.profilesGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: var(--spacing-lg);
-  margin-top: var(--spacing-lg);
-}
-
-.profileCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: var(--spacing-xl);
-  background-color: var(--color-bg-secondary);
-  border-radius: var(--border-radius-md);
-  border: 1px solid var(--color-bg-tertiary);
-  text-decoration: none;
-  transition: all var(--transition-normal);
-  min-height: 200px;
-}
-
-.profileCard:hover {
-  transform: translateY(-5px);
-  border-color: var(--color-accent);
-  box-shadow: 0 10px 30px -15px rgba(0, 217, 255, 0.2);
-}
-
-.profileIcon {
-  width: 60px;
-  height: 60px;
-  margin-bottom: var(--spacing-md);
+.experienceItem::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
   color: var(--color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: var(--fz-lg);
 }
 
-.profileIcon svg {
-  width: 100%;
-  height: 100%;
-}
-
-.profilePlatform {
-  font-size: var(--fz-xl);
+.degree {
+  font-size: var(--fz-xxl);
   font-weight: 600;
   color: var(--color-lightest-slate);
-  margin-bottom: var(--spacing-sm);
-  font-family: var(--font-mono);
+  margin-bottom: var(--spacing-xs);
 }
 
-.profileLink {
-  font-size: var(--fz-sm);
+.university {
+  font-size: var(--fz-xl);
   color: var(--color-accent);
-  font-family: var(--font-mono);
-  transition: transform var(--transition-fast);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xxs);
 }
 
-.profileCard:hover .profileLink {
-  transform: translateX(5px);
+.location {
+  font-family: var(--font-mono);
+  font-size: var(--fz-sm);
+  color: var(--color-slate);
+  margin-bottom: var(--spacing-xs);
 }
+
+.educationDetails {
+  margin-top: var(--spacing-md);
+}
+
+.description {
+  color: var(--color-slate);
+  font-size: var(--fz-md);
+  line-height: 1.6;
+}
+
 
 @media screen and (max-width: 768px) {
   .container {
@@ -186,19 +190,38 @@
     width: 100px;
   }
 
-  .certificatesGrid,
-  .profilesGrid {
-    grid-template-columns: 1fr;
+  .tabsContainer {
+    flex-direction: column;
     gap: var(--spacing-lg);
   }
 
-  .sectionSubtitle {
-    font-size: var(--fz-lg);
+  .tabsList {
+    flex-direction: row;
+    overflow-x: auto;
+    border-left: none;
+    border-bottom: 2px solid var(--color-bg-tertiary);
+    min-width: 100%;
+    padding-left: 0;
+    padding-bottom: 0;
   }
 
-  .certificateName,
-  .profilePlatform {
-    font-size: var(--fz-lg);
+  .tab {
+    border-left: none;
+    border-bottom: 2px solid transparent;
+    margin-left: 0;
+    margin-bottom: -2px;
+    white-space: nowrap;
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .tabActive {
+    border-left-color: transparent;
+    border-bottom-color: var(--color-accent);
+  }
+
+  .tabContent {
+    padding-left: 0;
+    padding-top: var(--spacing-lg);
   }
 }
 
@@ -207,22 +230,15 @@
     width: 50px;
   }
 
-  .certificatesGrid,
-  .profilesGrid {
-    grid-template-columns: 1fr;
+  .jobTitle {
+    font-size: var(--fz-xl);
   }
 
-  .certificateCard,
-  .profileCard {
-    padding: var(--spacing-md);
+  .degree {
+    font-size: var(--fz-xl);
   }
 
-  .profileCard {
-    min-height: 150px;
-  }
-
-  .profileIcon {
-    width: 50px;
-    height: 50px;
+  .university {
+    font-size: var(--fz-lg);
   }
 }

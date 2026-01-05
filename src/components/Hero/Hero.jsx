@@ -42,13 +42,8 @@ export const Hero = () => {
           Niaz Morshed.
         </motion.h1>
 
-        <motion.h3 className={styles.subtitle} variants={itemVariants}>
-          Full Stack Developer.
-        </motion.h3>
-
         <motion.p className={styles.description} variants={itemVariants}>
-          I'm a full-stack developer with experience using React and NodeJS. 
-          Passionate about building exceptional digital experiences and solving complex problems through code.
+          I'm a Software Engineer, currently working for Dublin 4IR as a Backend Developer Intern. I am in my final year of my undergraduate studies at BRAC University.
         </motion.p>
 
         <motion.div className={styles.buttonGroup} variants={itemVariants}>
@@ -58,16 +53,6 @@ export const Hero = () => {
         </motion.div>
       </motion.div>
 
-      <motion.div
-        className={styles.imageContainer}
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.5, delay: 0.8 }}
-      >
-        <div className={styles.imageWrapper}>
-          <img src="/profile.jpg" alt="Niaz Morshed" className={styles.profileImage} />
-        </div>
-      </motion.div>
     </section>
   );
 };

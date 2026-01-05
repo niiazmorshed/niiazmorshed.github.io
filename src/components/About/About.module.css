@@ -40,10 +40,54 @@
 .content {
   display: flex;
   gap: var(--spacing-xl);
+  align-items: flex-start;
 }
 
 .textContent {
   flex: 1;
+}
+
+.imageContainer {
+  position: relative;
+  max-width: 350px;
+  flex-shrink: 0;
+}
+
+.imageWrapper {
+  position: relative;
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 3px solid var(--color-accent);
+  border-radius: var(--border-radius-lg);
+  opacity: 0.5;
+  transition: opacity var(--transition-normal);
+  pointer-events: none;
+}
+
+.imageWrapper:hover::after {
+  opacity: 1;
+}
+
+.profileImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--border-radius-lg);
+  position: relative;
+  transition: all var(--transition-normal);
+  filter: grayscale(10%) contrast(1.1);
+}
+
+.imageWrapper:hover .profileImage {
+  filter: grayscale(0%) contrast(1);
+  transform: scale(1.02);
 }
 
 .paragraph {
@@ -130,6 +174,11 @@
 
   .content {
     flex-direction: column;
+  }
+
+  .imageContainer {
+    max-width: 300px;
+    margin: 0 auto;
   }
 
   .paragraph {

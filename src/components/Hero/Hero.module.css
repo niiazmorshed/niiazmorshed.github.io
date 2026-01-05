@@ -3,13 +3,12 @@
 .container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   min-height: 100vh;
   padding: var(--spacing-section) var(--spacing-xxl);
   position: relative;
   max-width: 1000px;
   margin: 0 auto;
-  gap: var(--spacing-xxl);
 }
 
 .content {
@@ -88,65 +87,6 @@
   transform: translateY(-1px);
 }
 
-.imageContainer {
-  position: relative;
-  max-width: 350px;
-  flex-shrink: 0;
-}
-
-.imageWrapper {
-  position: relative;
-  border-radius: var(--border-radius-lg);
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-}
-
-.imageWrapper::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border: 3px solid var(--color-accent);
-  border-radius: var(--border-radius-lg);
-  opacity: 0.5;
-  transition: opacity var(--transition-normal);
-  pointer-events: none;
-}
-
-.imageWrapper:hover::after {
-  opacity: 1;
-}
-
-.profileImage {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: var(--border-radius-lg);
-  position: relative;
-  transition: all var(--transition-normal);
-  filter: grayscale(10%) contrast(1.1);
-}
-
-.imageWrapper:hover .profileImage {
-  filter: grayscale(0%) contrast(1);
-  transform: scale(1.02);
-}
-
-@media screen and (max-width: 968px) {
-  .container {
-    flex-direction: column-reverse;
-    gap: var(--spacing-xl);
-    padding: var(--spacing-xxl) var(--spacing-md);
-  }
-
-  .content {
-    max-width: 100%;
-  }
-
-  .imageContainer {
-    max-width: 300px;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .container {
     padding: var(--spacing-xxl) var(--spacing-md);
@@ -163,10 +103,6 @@
 
   .primaryBtn {
     padding: 1rem 1.5rem;
-  }
-
-  .imageContainer {
-    max-width: 250px;
   }
 }
 

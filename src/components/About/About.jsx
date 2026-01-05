@@ -25,9 +25,11 @@ export const About = () => {
   };
 
   const skills = [
-    { category: "Frontend", items: ["React", "TypeScript", "Next.js", "Tailwind CSS"] },
-    { category: "Backend", items: ["Node.js", "Express", "PostgreSQL", "MongoDB"] },
-    { category: "Tools", items: ["Git", "Docker", "AWS", "Figma"] },
+    { category: "Programming Languages", items: ["Python", "C++", "C", "JavaScript"] },
+    { category: "Frontend", items: ["React", "Next.js", "Redux Toolkit", "Tailwind CSS"] },
+    { category: "Backend", items: ["Node.js", "Express.js", "RESTful API Development"] },
+    { category: "Database", items: ["MongoDB (NoSQL)", "MySQL (SQL)"] },
+    { category: "Tools", items: ["Git", "GitHub", "Postman", "Firebase", "Vercel"] },
   ];
 
   return (
@@ -45,19 +47,24 @@ export const About = () => {
         <div className={styles.content}>
           <div className={styles.textContent}>
             <p className={styles.paragraph}>
-              Hello! I'm a passionate developer who enjoys creating things that live on the internet.
-              My interest in web development started back in 2012 when I decided to try editing custom
-              Tumblr themes — turns out hacking together a custom reblog button taught me a lot about HTML & CSS!
+              I am a software engineer from Dhaka, Bangladesh.
+            
+            </p>
+            <p className={styles.paragraph}>
+              I'm currently working as a Backend Developer Intern at Dublin 4IR, where I'm gaining hands-on 
+              experience in developing enterprise-level applications. My expertise lies in RESTful API development, 
+              database design, and creating efficient server-side solutions. I've successfully built full-stack 
+              applications including learning management systems, healthcare platforms, and e-commerce solutions.
             </p>
 
             <p className={styles.paragraph}>
-              Fast-forward to today, and I've had the privilege of working at an advertising agency, a start-up,
-              a huge corporation, and a student-led design studio. My main focus these days is building
-              accessible, inclusive products and digital experiences.
+              Beyond development, I have a huge interest in competitive programming and problem-solving. 
+              I actively solve problems on platforms like Codeforces and LeetCode to sharpen my algorithmic 
+              thinking. My goal is to contribute unique solutions and build creative products that make a difference.
             </p>
 
             <p className={styles.paragraph}>
-              Here are a few technologies I've been working with recently:
+              Here are the technologies and tools I work with:
             </p>
 
             <motion.ul
@@ -75,6 +82,18 @@ export const About = () => {
               ))}
             </motion.ul>
           </div>
+
+          <motion.div
+            className={styles.imageContainer}
+            initial={{ opacity: 0, scale: 0.8 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <div className={styles.imageWrapper}>
+              <img src="/profile.jpg" alt="Niaz Morshed" className={styles.profileImage} />
+            </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>
