@@ -1,5 +1,16 @@
 @import "../../vars.css";
 
+.progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #00e5ff, #4488ff);
+  transform-origin: left;
+  z-index: 10;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -104,22 +115,23 @@
 }
 
 .resumeBtn {
-  border: 2px solid var(--color-accent);
   border-radius: var(--border-radius-sm);
   padding: var(--spacing-xs) var(--spacing-md) !important;
-  background-color: transparent;
+  border: 2px solid transparent !important;
+  background:
+    linear-gradient(rgba(0, 8, 20, 1), rgba(0, 8, 20, 1)) padding-box,
+    linear-gradient(135deg, #00e5ff, #4488ff) border-box !important;
   color: var(--color-accent) !important;
   transition: all var(--transition-normal);
   margin-left: var(--spacing-sm);
 }
 
 .resumeBtn:hover {
-  background-color: transparent;
   transform: translateY(-2px);
-  box-shadow: 0 0 10px var(--color-accent), 0 0 20px var(--color-accent),
-    inset 0 0 10px rgba(0, 217, 255, 0.2);
-  border-color: var(--color-accent);
-  filter: brightness(1.2);
+  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.5));
+  background:
+    linear-gradient(rgba(0, 229, 255, 0.06), rgba(68, 136, 255, 0.06)) padding-box,
+    linear-gradient(135deg, #00e5ff, #4488ff) border-box !important;
 }
 
 @media screen and (max-width: 768px) {

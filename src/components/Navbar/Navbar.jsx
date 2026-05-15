@@ -1,10 +1,11 @@
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.css";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -40,6 +41,10 @@ export const Navbar = () => {
       animate="visible"
       variants={navVariants}
     >
+      <motion.div
+        className={styles.progressBar}
+        style={{ scaleX: scrollYProgress }}
+      />
       <a className={styles.logo} href="/">
         <img src="/name2.png" alt="N" className={styles.logoImage} />
       </a>

@@ -5,9 +5,10 @@
   --color-bg-tertiary: #003566;
   --color-text-primary: #e8f1ff;
   --color-text-secondary: #94a3b8;
-  --color-text-highlight: #00d9ff;
-  --color-accent: #00d9ff;
-  --color-accent-secondary: #00b4d8;
+  --color-text-highlight: #00e5ff;
+  --color-accent: #00e5ff;
+  --color-accent-secondary: #4488ff;
+  --color-gradient: linear-gradient(135deg, #00e5ff 0%, #4488ff 100%);
   --color-white: #f8fafc;
   --color-slate: #94a3b8;
   --color-light-slate: #cbd5e1;

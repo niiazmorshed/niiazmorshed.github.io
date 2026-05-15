@@ -32,7 +32,7 @@
 .imageTint {
   position: absolute;
   inset: 0;
-  background: rgba(0, 217, 255, 0.1);
+  background: rgba(0, 229, 255, 0.08);
   mix-blend-mode: multiply;
 }
 

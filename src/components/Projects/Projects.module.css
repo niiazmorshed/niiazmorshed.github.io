@@ -1,13 +1,9 @@
 @import "../../vars.css";
 
 .container {
-  max-width: 1000px;
+  max-width: 1100px;
   margin: 0 auto;
   padding: var(--spacing-section) var(--spacing-xxl);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 .title {
@@ -37,28 +33,33 @@
   margin-right: var(--spacing-sm);
 }
 
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xxl);
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-lg);
+}
+
+@media screen and (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media screen and (max-width: 768px) {
   .container {
     padding: var(--spacing-xxl) var(--spacing-md);
-    min-height: auto;
   }
 
   .title::after {
     width: 100px;
   }
-
-  .projects {
-    gap: var(--spacing-xl);
-  }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
   .title::after {
     width: 50px;
   }

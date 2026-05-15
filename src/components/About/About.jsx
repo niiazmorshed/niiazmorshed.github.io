@@ -3,32 +3,11 @@ import React from "react";
 import styles from "./About.module.css";
 
 export const About = () => {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-      },
-    },
-  };
-
   const skills = [
-    { category: "Programming Languages", items: ["Python", "C++", "C", "JavaScript"] },
+    { category: "Languages", items: ["Python", "C++", "C", "JavaScript"] },
     { category: "Frontend", items: ["React", "Next.js", "Redux Toolkit", "Tailwind CSS"] },
-    { category: "Backend", items: ["Node.js", "Express.js", "RESTful API Development"] },
-    { category: "Database", items: ["MongoDB (NoSQL)", "MySQL (SQL)"] },
+    { category: "Backend", items: ["Node.js", "Express.js", "RESTful APIs"] },
+    { category: "Database", items: ["MongoDB", "MySQL"] },
     { category: "Tools", items: ["Git", "GitHub", "Postman", "Firebase", "Vercel"] },
   ];
 
@@ -47,50 +26,57 @@ export const About = () => {
         <div className={styles.content}>
           <div className={styles.textContent}>
             <p className={styles.paragraph}>
-              I am a software engineer from Dhaka, Bangladesh.
-            
+              I'm a software engineer from Dhaka, Bangladesh, currently working as a{" "}
+              <span className={styles.highlight}>Backend Developer Intern at Dublin 4IR</span> — building
+              enterprise-level applications and gaining hands-on experience in production systems.
             </p>
             <p className={styles.paragraph}>
-              I'm currently working as a Backend Developer Intern at Dublin 4IR, where I'm gaining hands-on 
-              experience in developing enterprise-level applications. My expertise lies in RESTful API development, 
-              database design, and creating efficient server-side solutions. I've successfully built full-stack 
-              applications including learning management systems, healthcare platforms, and e-commerce solutions.
+              My expertise spans RESTful API development, database design, and full-stack solutions.
+              I've shipped projects ranging from learning management systems and healthcare platforms
+              to e-commerce solutions and visa consultancy portals.
             </p>
-
             <p className={styles.paragraph}>
-              Beyond development, I have a huge interest in competitive programming and problem-solving. 
-              I actively solve problems on platforms like Codeforces and LeetCode to sharpen my algorithmic 
-              thinking. My goal is to contribute unique solutions and build creative products that make a difference.
+              Beyond work, I'm passionate about competitive programming — actively solving problems on
+              Codeforces and LeetCode to keep my algorithmic thinking sharp.
             </p>
 
-            <p className={styles.paragraph}>
-              Here are the technologies and tools I work with:
-            </p>
-
-            <motion.ul
-              className={styles.skillsList}
-              variants={containerVariants}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true }}
-            >
-              {skills.map((skillGroup, index) => (
-                <motion.li key={index} className={styles.skillItem} variants={itemVariants}>
-                  <span className={styles.skillCategory}>{skillGroup.category}:</span>
-                  <span className={styles.skillTech}>{skillGroup.items.join(", ")}</span>
-                </motion.li>
-              ))}
-            </motion.ul>
+            <div className={styles.skillsSection}>
+              <p className={styles.skillsLabel}>Technologies I work with:</p>
+              <div className={styles.skillsGrid}>
+                {skills.map((group, i) => (
+                  <motion.div
+                    key={i}
+                    className={styles.skillGroup}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.4, delay: i * 0.08 }}
+                  >
+                    <span className={styles.skillCategory}>
+                      <span className={styles.dot} />
+                      {group.category}
+                    </span>
+                    <div className={styles.skillTags}>
+                      {group.items.map((item, j) => (
+                        <span key={j} className={styles.skillTag}>
+                          {item}
+                        </span>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
           </div>
 
           <motion.div
             className={styles.imageContainer}
-            initial={{ opacity: 0, scale: 0.8 }}
-            whileInView={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className={styles.imageWrapper}>
+            <div className={styles.imageFrame}>
               <img src="/profile.jpg" alt="Niaz Morshed" className={styles.profileImage} />
             </div>
           </motion.div>

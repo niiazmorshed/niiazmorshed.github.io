@@ -25,7 +25,6 @@ export const Education = () => {
       },
     },
   };
-
   return (
     <section className={styles.container} id="education">
       <motion.div

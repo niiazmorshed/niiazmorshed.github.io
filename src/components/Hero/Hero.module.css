@@ -59,28 +59,30 @@
 }
 
 .primaryBtn {
+  position: relative;
   display: inline-block;
   text-decoration: none;
-  color: var(--color-accent);
-  background-color: transparent;
-  border: 2px solid var(--color-accent);
-  border-radius: var(--border-radius-sm);
   padding: 1.25rem 1.75rem;
   font-family: var(--font-mono);
   font-size: var(--fz-sm);
   line-height: 1;
   cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  border: 2px solid transparent;
+  background:
+    linear-gradient(var(--color-bg-primary), var(--color-bg-primary)) padding-box,
+    var(--color-gradient) border-box;
+  color: var(--color-accent);
   transition: all var(--transition-normal);
-  position: relative;
+  letter-spacing: 0.04em;
 }
 
 .primaryBtn:hover {
-  background-color: transparent;
   transform: translateY(-3px);
-  box-shadow: 0 0 10px var(--color-accent), 0 0 20px var(--color-accent),
-    inset 0 0 10px rgba(0, 217, 255, 0.2);
-  border-color: var(--color-accent);
-  filter: brightness(1.2);
+  filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.5));
+  background:
+    linear-gradient(rgba(0, 229, 255, 0.06), rgba(68, 136, 255, 0.06)) padding-box,
+    var(--color-gradient) border-box;
 }
 
 .primaryBtn:active {
