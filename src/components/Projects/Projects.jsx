@@ -44,6 +44,14 @@ export const Projects = () => {
       skills: ["React", "Node.js", "MongoDB", "Express.js"],
       demo: "https://lagbe-mart-v5fh.vercel.app/",
       source: "https://github.com/niiazmorshed/LagbeMart"
+    },
+    {
+      title: "Make a Difference",
+      description: "A modern volunteer management platform built with the MERN stack that streamlines creating, managing, and participating in volunteer opportunities for both organizers and volunteers.",
+      imageSrc: "/project_6.png",
+      skills: ["React", "Node.js", "MongoDB", "Express.js"],
+      demo: "https://make-a-difference-2rc1.vercel.app",
+      source: "https://github.com/niiazmorshed/Make-a-Difference"
     }
   ];
 
