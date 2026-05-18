@@ -42,7 +42,7 @@ export const Projects = () => {
       description: "An e-commerce platform for seamless online shopping with product management, cart functionality, and user authentication.",
       imageSrc: "/project_3.png",
       skills: ["React", "Node.js", "MongoDB", "Express.js"],
-      demo: "https://lagbe-mart-v5fh.vercel.app/",
+      demo: "https://lagbe-mart.vercel.app",
       source: "https://github.com/niiazmorshed/LagbeMart"
     },
     {
