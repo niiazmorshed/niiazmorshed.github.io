@@ -1,14 +1,14 @@
-import { motion } from "framer-motion";
-import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
 import { ProjectCard } from "./ProjectCard";
 import styles from "./Projects.module.css";
 
 export const Projects = () => {
-  const projects = [
+  const featuredProjects = [
     {
       title: "FineAnswer",
       description: "A study abroad consultancy platform helping students explore universities, manage their applications, and access expert guidance for studying overseas — focusing on Ireland, UK, and Australia.",
-      imageSrc: "/project_4.png",
+      imageSrc: "/proj_fineAnswer.png",
       skills: ["React", "Node.js", "MongoDB", "Express.js", "TailwindCSS"],
       demo: "https://www.fineanswer.net/",
       source: "https://github.com/niiazmorshed/FineAnswer"
@@ -16,7 +16,7 @@ export const Projects = () => {
     {
       title: "IrishBangla",
       description: "A marketing and information website for Emerald Visa & Tours, featuring formal navigation, breadcrumbs, country-based Ireland visa guidance, and dedicated information pages.",
-      imageSrc: "/project_5.png",
+      imageSrc: "/proj_irishBangla.png",
       skills: ["React", "JavaScript", "CSS", "HTML"],
       demo: "https://irishbangla.vercel.app/",
       source: "https://github.com/niiazmorshed/Irishbangla"
@@ -24,36 +24,55 @@ export const Projects = () => {
     {
       title: "Escape The Matrix",
       description: "A comprehensive full-stack LMS with role-based access control, course management, and a complete assessment system featuring assignments, quizzes, and discussions.",
-      imageSrc: "/project_1.png",
+      imageSrc: "/proj_escapeMatrix.png",
       skills: ["React", "Node.js", "MongoDB", "Express.js", "Firebase", "TailwindCSS"],
       demo: "https://escape-the-matrix-id9n.vercel.app/",
       source: "https://github.com/niiazmorshed/Escape-The-Matrix"
     },
     {
+      title: "Multi Class Text Classification",
+      description: "An NLP project that classifies question–answer text into 10 balanced topic categories across ~153K samples, benchmarking classical ML (TF-IDF + Logistic Regression) against deep recurrent networks (RNN, GRU, LSTM) using Word2Vec and GloVe embeddings.",
+      imageSrc: "/proj_multiclass_text.png",
+      skills: ["Python", "scikit-learn", "TensorFlow", "NLTK", "NLP"],
+      source: "https://github.com/niiazmorshed/Multi_ClassText_Classification"
+    },
+    {
+      title: "LagbeMart",
+      description: "An e-commerce platform for seamless online shopping with product management, cart functionality, and user authentication.",
+      imageSrc: "/proj_lagbe_mart.png",
+      skills: ["React", "Node.js", "MongoDB", "Express.js"],
+      demo: "https://lagbe-mart.vercel.app",
+      source: "https://github.com/niiazmorshed/LagbeMart"
+    }
+  ];
+
+  const otherProjects = [
+    {
       title: "Digital Healthcare Assistant",
       description: "A modern healthcare platform designed to provide digital health services and assistance to patients and healthcare providers.",
-      imageSrc: "/project_2.png",
+      imageSrc: "/proj_digital_healthcare_assistant.png",
       skills: ["React", "Node.js", "MongoDB", "Express.js"],
       demo: "https://digital-healthcare-assistant.vercel.app/",
       source: "https://github.com/niiazmorshed/Digital-Healthcare-Assistant"
     },
     {
-      title: "LagbeMart",
-      description: "An e-commerce platform for seamless online shopping with product management, cart functionality, and user authentication.",
-      imageSrc: "/project_3.png",
-      skills: ["React", "Node.js", "MongoDB", "Express.js"],
-      demo: "https://lagbe-mart.vercel.app",
-      source: "https://github.com/niiazmorshed/LagbeMart"
-    },
-    {
       title: "Make a Difference",
       description: "A modern volunteer management platform built with the MERN stack that streamlines creating, managing, and participating in volunteer opportunities for both organizers and volunteers.",
-      imageSrc: "/project_6.png",
+      imageSrc: "/proj_mad.png",
       skills: ["React", "Node.js", "MongoDB", "Express.js"],
       demo: "https://make-a-difference-90f54.web.app",
       source: "https://github.com/niiazmorshed/Make-a-Difference"
+    },
+    {
+      title: "Customer Category Classification",
+      description: "A machine learning project that classifies retail customers into four market segments using demographic and behavioral data — combining EDA, K-Means clustering, and a comparison of five supervised classifiers to drive targeted marketing.",
+      imageSrc: "/proj_customer_category.png",
+      skills: ["Python", "scikit-learn", "pandas", "NumPy", "Matplotlib"],
+      source: "https://github.com/niiazmorshed/Customer_Category_Classification"
     }
   ];
+
+  const [showMore, setShowMore] = useState(false);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -82,10 +101,45 @@ export const Projects = () => {
           whileInView="visible"
           viewport={{ once: true, margin: "-60px" }}
         >
-          {projects.map((project, index) => (
+          {featuredProjects.map((project, index) => (
             <ProjectCard key={index} project={project} index={index} />
           ))}
         </motion.div>
+
+        <AnimatePresence initial={false}>
+          {showMore && (
+            <motion.div
+              key="otherProjects"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
+              transition={{ duration: 0.4 }}
+            >
+              <h3 className={styles.subTitle}>Other Notable Projects</h3>
+              <motion.div
+                className={styles.grid}
+                variants={containerVariants}
+                initial="hidden"
+                animate="visible"
+              >
+                {otherProjects.map((project, index) => (
+                  <ProjectCard key={index} project={project} index={index} />
+                ))}
+              </motion.div>
+            </motion.div>
+          )}
+        </AnimatePresence>
+
+        <div className={styles.moreWrapper}>
+          <button
+            type="button"
+            className={styles.moreButton}
+            onClick={() => setShowMore((prev) => !prev)}
+            aria-expanded={showMore}
+          >
+            {showMore ? "Show Less" : "Other Notable Projects"}
+          </button>
+        </div>
       </motion.div>
     </section>
   );

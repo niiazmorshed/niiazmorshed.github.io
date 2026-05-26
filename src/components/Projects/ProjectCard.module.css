@@ -114,14 +114,14 @@
   display: flex;
   flex-direction: column;
   flex: 1;
-  padding: var(--spacing-lg);
+  padding: var(--spacing-md);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
 }
 
 .overline {
@@ -156,10 +156,10 @@
 }
 
 .title {
-  font-size: var(--fz-xl);
+  font-size: var(--fz-lg);
   font-weight: 600;
   color: var(--color-lightest-slate);
-  margin: 0 0 var(--spacing-sm) 0;
+  margin: 0 0 var(--spacing-xs) 0;
   transition: color var(--transition-fast);
 }
 
@@ -170,9 +170,12 @@
 .description {
   font-size: var(--fz-sm);
   color: var(--color-slate);
-  line-height: 1.65;
-  flex: 1;
+  line-height: 1.6;
   margin-bottom: var(--spacing-md);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 /* ─── Tech pills ────────────────────────────────────────── */
@@ -181,7 +184,7 @@
   flex-wrap: wrap;
   gap: 6px;
   padding: 0;
-  margin: 0;
+  margin: auto 0 0 0;
   list-style: none;
 }
 

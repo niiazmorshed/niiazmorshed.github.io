@@ -68,7 +68,7 @@ export const ProjectCard = ({
         </div>
 
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.description}>{description}</p>
+        <p className={styles.description} title={description}>{description}</p>
 
         <ul className={styles.techList}>
           {skills.map((skill, i) => (
