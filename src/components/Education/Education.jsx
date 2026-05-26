@@ -33,9 +33,7 @@ export const Education = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className={styles.title}>
-          <span className={styles.sectionNumber}>03.</span> Education
-        </h2>
+        <h2 className={styles.title}>Education</h2>
 
         <div className={styles.content}>
           <div className={styles.tabsContainer}>

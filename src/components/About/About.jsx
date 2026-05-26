@@ -19,9 +19,7 @@ export const About = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className={styles.title}>
-          <span className={styles.sectionNumber}>01.</span> About Me
-        </h2>
+        <h2 className={styles.title}>About Me</h2>
 
         <div className={styles.content}>
           <div className={styles.textContent}>
@@ -41,28 +39,19 @@ export const About = () => {
             </p>
 
             <div className={styles.skillsSection}>
-              <p className={styles.skillsLabel}>Technologies I work with:</p>
+              <p className={styles.skillsLabel}>Technologies I work with</p>
               <div className={styles.skillsGrid}>
                 {skills.map((group, i) => (
                   <motion.div
                     key={i}
-                    className={styles.skillGroup}
+                    className={styles.skillRow}
                     initial={{ opacity: 0, y: 10 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.4, delay: i * 0.08 }}
                   >
-                    <span className={styles.skillCategory}>
-                      <span className={styles.dot} />
-                      {group.category}
-                    </span>
-                    <div className={styles.skillTags}>
-                      {group.items.map((item, j) => (
-                        <span key={j} className={styles.skillTag}>
-                          {item}
-                        </span>
-                      ))}
-                    </div>
+                    <span className={styles.skillCategory}>{group.category}</span>
+                    <span className={styles.skillItems}>{group.items.join(" · ")}</span>
                   </motion.div>
                 ))}
               </div>

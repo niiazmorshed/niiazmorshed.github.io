@@ -73,39 +73,6 @@
   transform-origin: center;
 }
 
-/* Progress indicator */
-.progressWrapper {
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-sm);
-  margin-top: var(--spacing-xl);
-}
-
-.progressTrack {
-  width: 180px;
-  height: 3px;
-  border-radius: 999px;
-  background: rgba(0, 229, 255, 0.12);
-  overflow: hidden;
-}
-
-.progressBar {
-  height: 100%;
-  border-radius: 999px;
-  background: var(--color-gradient);
-  box-shadow: 0 0 10px rgba(0, 229, 255, 0.6);
-  transition: width 0.1s linear;
-}
-
-.progressText {
-  font-family: var(--font-mono);
-  font-size: var(--fz-xs);
-  color: var(--color-slate);
-  min-width: 38px;
-  text-align: right;
-  letter-spacing: 0.04em;
-}
-
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -145,10 +112,6 @@
   .logoText {
     font-size: 56px;
   }
-
-  .progressTrack {
-    width: 150px;
-  }
 }
 
 @media screen and (max-width: 480px) {
@@ -164,9 +127,5 @@
 
   .logoText {
     font-size: 48px;
-  }
-
-  .progressTrack {
-    width: 130px;
   }
 }

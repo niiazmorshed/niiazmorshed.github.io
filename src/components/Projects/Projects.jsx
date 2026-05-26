@@ -90,9 +90,7 @@ export const Projects = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className={styles.title}>
-          <span className={styles.sectionNumber}>03.</span> Some Things I've Built
-        </h2>
+        <h2 className={styles.title}>Some Things I&apos;ve Built</h2>
 
         <motion.div
           className={styles.grid}

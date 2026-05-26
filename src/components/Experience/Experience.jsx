@@ -46,9 +46,7 @@ export const Experience = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        <h2 className={styles.title}>
-          <span className={styles.sectionNumber}>02.</span> Education & Experience
-        </h2>
+        <h2 className={styles.title}>Education &amp; Experience</h2>
 
         <div className={styles.content}>
           <div className={styles.tabsContainer}>

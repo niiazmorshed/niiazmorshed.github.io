@@ -59,34 +59,25 @@
 }
 
 .primaryBtn {
-  position: relative;
   display: inline-block;
   text-decoration: none;
-  padding: 1.25rem 1.75rem;
+  padding: 0.95rem 1.6rem;
   font-family: var(--font-mono);
   font-size: var(--fz-sm);
   line-height: 1;
   cursor: pointer;
   border-radius: var(--border-radius-sm);
-  border: 2px solid transparent;
-  background:
-    linear-gradient(var(--color-bg-primary), var(--color-bg-primary)) padding-box,
-    var(--color-gradient) border-box;
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  background: transparent;
   color: var(--color-accent);
-  transition: all var(--transition-normal);
   letter-spacing: 0.04em;
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .primaryBtn:hover {
-  transform: translateY(-3px);
-  filter: drop-shadow(0 0 12px rgba(0, 229, 255, 0.5));
-  background:
-    linear-gradient(rgba(0, 229, 255, 0.06), rgba(68, 136, 255, 0.06)) padding-box,
-    var(--color-gradient) border-box;
-}
-
-.primaryBtn:active {
-  transform: translateY(-1px);
+  background-color: rgba(0, 229, 255, 0.08);
+  border-color: var(--color-accent);
 }
 
 @media screen and (max-width: 768px) {

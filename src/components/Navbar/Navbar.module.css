@@ -117,21 +117,17 @@
 .resumeBtn {
   border-radius: var(--border-radius-sm);
   padding: var(--spacing-xs) var(--spacing-md) !important;
-  border: 2px solid transparent !important;
-  background:
-    linear-gradient(rgba(0, 8, 20, 1), rgba(0, 8, 20, 1)) padding-box,
-    linear-gradient(135deg, #00e5ff, #4488ff) border-box !important;
+  border: 1px solid rgba(0, 229, 255, 0.4) !important;
+  background: transparent !important;
   color: var(--color-accent) !important;
-  transition: all var(--transition-normal);
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast);
   margin-left: var(--spacing-sm);
 }
 
 .resumeBtn:hover {
-  transform: translateY(-2px);
-  filter: drop-shadow(0 0 10px rgba(0, 229, 255, 0.5));
-  background:
-    linear-gradient(rgba(0, 229, 255, 0.06), rgba(68, 136, 255, 0.06)) padding-box,
-    linear-gradient(135deg, #00e5ff, #4488ff) border-box !important;
+  background-color: rgba(0, 229, 255, 0.08) !important;
+  border-color: var(--color-accent) !important;
 }
 
 @media screen and (max-width: 768px) {

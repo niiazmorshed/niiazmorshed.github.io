@@ -4,28 +4,8 @@ import styles from "./Loader.module.css";
 
 export const Loader = ({ onLoadComplete }) => {
   const [isExiting, setIsExiting] = useState(false);
-  const [progress, setProgress] = useState(0);
 
-  // Count up 0 -> 100 while the intro animations play.
-  useEffect(() => {
-    const duration = 1900; // ms to reach 100%
-    const stepTime = 20;
-    const increment = 100 / (duration / stepTime);
-    const interval = setInterval(() => {
-      setProgress((prev) => {
-        const next = prev + increment;
-        if (next >= 100) {
-          clearInterval(interval);
-          return 100;
-        }
-        return next;
-      });
-    }, stepTime);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  // Hold briefly at 100%, then fade the loader out.
+  // Let the intro animations play, then fade the loader out.
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsExiting(true);
@@ -115,16 +95,6 @@ export const Loader = ({ onLoadComplete }) => {
               N
             </motion.text>
           </svg>
-        </div>
-
-        <div className={styles.progressWrapper}>
-          <div className={styles.progressTrack}>
-            <div
-              className={styles.progressBar}
-              style={{ width: `${progress}%` }}
-            />
-          </div>
-          <span className={styles.progressText}>{Math.round(progress)}%</span>
         </div>
       </motion.div>
     </motion.div>

@@ -73,13 +73,13 @@
 
 .tab:hover {
   color: var(--color-accent);
-  background-color: rgba(100, 255, 218, 0.05);
+  background-color: rgba(0, 229, 255, 0.05);
 }
 
 .tabActive {
   color: var(--color-accent);
   border-left-color: var(--color-accent);
-  background-color: rgba(100, 255, 218, 0.1);
+  background-color: rgba(0, 229, 255, 0.08);
 }
 
 .tabContent {

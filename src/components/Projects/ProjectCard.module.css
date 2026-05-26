@@ -88,20 +88,16 @@
   width: 48px;
   height: 48px;
   border-radius: 50%;
-  border: 2px solid transparent;
-  background:
-    linear-gradient(rgba(0, 8, 20, 0.9), rgba(0, 8, 20, 0.9)) padding-box,
-    linear-gradient(135deg, #00e5ff, #4488ff) border-box;
+  border: 1px solid rgba(0, 229, 255, 0.4);
+  background: rgba(0, 8, 20, 0.6);
   color: var(--color-accent);
-  transition: all var(--transition-fast);
+  transition: background-color var(--transition-fast),
+    border-color var(--transition-fast);
 }
 
 .overlayBtn:hover {
-  background:
-    linear-gradient(135deg, #00e5ff, #4488ff) padding-box,
-    linear-gradient(135deg, #00e5ff, #4488ff) border-box;
-  color: var(--color-bg-primary);
-  transform: scale(1.1);
+  background-color: rgba(0, 229, 255, 0.12);
+  border-color: var(--color-accent);
 }
 
 .overlayBtn svg {
