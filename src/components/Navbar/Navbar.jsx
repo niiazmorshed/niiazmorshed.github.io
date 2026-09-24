@@ -84,7 +84,7 @@ export const Navbar = () => {
         </li>
         <li>
           <a 
-            href="/Niaz-Morshed-Resume .pdf" 
+            href="/Niaz-Morshed-Resume.pdf" 
             target="_blank" 
             rel="noopener noreferrer"
             download="Niaz-Morshed-Resume.pdf"

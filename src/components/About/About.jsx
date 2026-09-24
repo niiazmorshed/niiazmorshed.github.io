@@ -66,7 +66,7 @@ export const About = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
           >
             <div className={styles.imageFrame}>
-              <img src="/profile.jpg" alt="Niaz Morshed" className={styles.profileImage} />
+              <img src="/profile.png" alt="Niaz Morshed" className={styles.profileImage} />
             </div>
           </motion.div>
         </div>
