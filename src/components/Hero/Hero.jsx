@@ -43,7 +43,7 @@ export const Hero = () => {
         </motion.h1>
 
         <motion.p className={styles.description} variants={itemVariants}>
-          I'm a Software Engineer, currently working for Dublin 4IR as a Backend Developer Intern. I am in my final year of my undergraduate studies at BRAC University.
+          I'm a Software Engineer working as a Junior Backend Developer at Dublin 4IR. I hold a BSc in Computer Science from BRAC University.
         </motion.p>
 
         <motion.div className={styles.buttonGroup} variants={itemVariants}>

@@ -25,13 +25,13 @@ export const About = () => {
           <div className={styles.textContent}>
             <p className={styles.paragraph}>
               I'm a software engineer from Dhaka, Bangladesh, currently working as a{" "}
-              <span className={styles.highlight}>Backend Developer Intern at Dublin 4IR</span> — building
-              enterprise-level applications and gaining hands-on experience in production systems.
+              <span className={styles.highlight}>Junior Backend Developer at Dublin 4IR</span> — building
+              backend services, APIs and AI integrations for production systems.
             </p>
             <p className={styles.paragraph}>
               My expertise spans RESTful API development, database design, and full-stack solutions.
               I've shipped projects ranging from learning management systems and healthcare platforms
-              to e-commerce solutions and visa consultancy portals.
+              to e-commerce solutions, visa decision alerts and accountancy client portals.
             </p>
             <p className={styles.paragraph}>
               Beyond work, I'm passionate about competitive programming — actively solving problems on

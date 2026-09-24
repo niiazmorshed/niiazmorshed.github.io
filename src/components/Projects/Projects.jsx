@@ -6,28 +6,27 @@ import styles from "./Projects.module.css";
 export const Projects = () => {
   const featuredProjects = [
     {
+      title: "VisaRelay",
+      description: "An email alert service that notifies applicants the moment their Irish visa decision appears on the Embassy of Ireland (New Delhi) published list. A Node worker polls and diffs the embassy's daily .ods file with built-in safety checks, while a Next.js site handles student sign-ups, agency dashboards with seat packs, free decision search, and EPS payments.",
+      imageSrc: "/proj_visarelay.png",
+      skills: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Resend", "DigitalOcean"],
+      demo: "https://www.visarelay.com"
+    },
+    {
+      title: "AIBN Chartered Accountants Ltd",
+      description: "Website, client portal and staff admin for a UK and Ireland chartered accountancy practice. It includes eight Irish tax calculators with admin-editable, audited rates, a Founders Hub resource catalogue, Supabase authentication with role-based access, and client enquiry threads.",
+      imageSrc: "/proj_aibn.png",
+      skills: ["Next.js", "TypeScript", "PostgreSQL", "Supabase", "Tailwind CSS"],
+      demo: "https://www.aibncharteredaccountants.ie",
+      source: "https://github.com/niiazmorshed/Ca-Farm"
+    },
+    {
       title: "FineAnswer",
       description: "A study abroad consultancy platform helping students explore universities, manage their applications, and access expert guidance for studying overseas — focusing on Ireland, UK, and Australia.",
       imageSrc: "/proj_fineAnswer.png",
       skills: ["React", "Node.js", "MongoDB", "Express.js", "TailwindCSS"],
       demo: "https://www.fineanswer.net/",
       source: "https://github.com/niiazmorshed/FineAnswer"
-    },
-    {
-      title: "IrishBangla",
-      description: "A marketing and information website for Emerald Visa & Tours, featuring formal navigation, breadcrumbs, country-based Ireland visa guidance, and dedicated information pages.",
-      imageSrc: "/proj_irishBangla.png",
-      skills: ["React", "JavaScript", "CSS", "HTML"],
-      demo: "https://irishbangla.vercel.app/",
-      source: "https://github.com/niiazmorshed/Irishbangla"
-    },
-    {
-      title: "Escape The Matrix",
-      description: "A comprehensive full-stack LMS with role-based access control, course management, and a complete assessment system featuring assignments, quizzes, and discussions.",
-      imageSrc: "/proj_escapeMatrix.png",
-      skills: ["React", "Node.js", "MongoDB", "Express.js", "Firebase", "TailwindCSS"],
-      demo: "https://escape-the-matrix-id9n.vercel.app/",
-      source: "https://github.com/niiazmorshed/Escape-The-Matrix"
     },
     {
       title: "Multi Class Text Classification",
@@ -37,16 +36,32 @@ export const Projects = () => {
       source: "https://github.com/niiazmorshed/Multi_ClassText_Classification"
     },
     {
+      title: "IrishBangla",
+      description: "A marketing and information website for Emerald Visa & Tours, featuring formal navigation, breadcrumbs, country-based Ireland visa guidance, and dedicated information pages.",
+      imageSrc: "/proj_irishBangla.png",
+      skills: ["React", "JavaScript", "CSS", "HTML"],
+      demo: "https://irishbangla.vercel.app/",
+      source: "https://github.com/niiazmorshed/Irishbangla"
+    }
+  ];
+
+  const otherProjects = [
+    {
+      title: "Escape The Matrix",
+      description: "A comprehensive full-stack LMS with role-based access control, course management, and a complete assessment system featuring assignments, quizzes, and discussions.",
+      imageSrc: "/proj_escapeMatrix.png",
+      skills: ["React", "Node.js", "MongoDB", "Express.js", "Firebase", "TailwindCSS"],
+      demo: "https://escape-the-matrix-id9n.vercel.app/",
+      source: "https://github.com/niiazmorshed/Escape-The-Matrix"
+    },
+    {
       title: "LagbeMart",
       description: "An e-commerce platform for seamless online shopping with product management, cart functionality, and user authentication.",
       imageSrc: "/proj_lagbe_mart.png",
       skills: ["React", "Node.js", "MongoDB", "Express.js"],
       demo: "https://lagbe-mart.vercel.app",
       source: "https://github.com/niiazmorshed/LagbeMart"
-    }
-  ];
-
-  const otherProjects = [
+    },
     {
       title: "Digital Healthcare Assistant",
       description: "A modern healthcare platform designed to provide digital health services and assistance to patients and healthcare providers.",

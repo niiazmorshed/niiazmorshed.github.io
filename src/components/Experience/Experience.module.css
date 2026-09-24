@@ -123,6 +123,10 @@
   margin-top: var(--spacing-xs);
 }
 
+.position {
+  margin-top: var(--spacing-xl);
+}
+
 .experienceList {
   list-style: none;
   padding: 0;

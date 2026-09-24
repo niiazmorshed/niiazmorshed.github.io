@@ -9,14 +9,28 @@ export const Experience = () => {
     {
       type: "experience",
       name: "Dublin 4IR",
-      role: "Backend Developer Intern",
-      period: "January 2026 - Present",
       website: "https://dublin4ir.com/",
-      responsibilities: [
-        "Developing and maintaining backend services and RESTful APIs for enterprise applications",
-        "Collaborating with cross-functional teams to design and implement scalable solutions",
-        "Working with modern backend technologies including Node.js, Express.js, and database systems",
-      ]
+      positions: [
+        {
+          role: "Junior Backend Developer",
+          period: "April 2026 - Present",
+          responsibilities: [
+            "Design, build and maintain backend services and RESTful APIs for production applications",
+            "Own system architecture and database design decisions, focused on scalability and maintainability",
+            "Integrate AI capabilities into products and internal workflows",
+            "Manage deployments and releases, and support internal IT operations",
+          ],
+        },
+        {
+          role: "Backend Developer Intern",
+          period: "January 2026 - April 2026",
+          responsibilities: [
+            "Developed RESTful APIs and implemented database features for client projects",
+            "Supported deployments and maintained Git-based workflows across the team",
+            "Contributed to frontend delivery in collaboration with cross-functional teams",
+          ],
+        },
+      ],
     },
     {
       type: "education",
@@ -71,32 +85,34 @@ export const Experience = () => {
                   variants={itemVariants}
                 >
                   {items[activeTab].type === "experience" ? (
-                    <>
-                      <h3 className={styles.jobTitle}>
-                        {items[activeTab].role}{" "}
-                        <a 
-                          href={items[activeTab].website} 
-                          target="_blank" 
-                          rel="noopener noreferrer"
-                          className={styles.companyLink}
-                        >
-                          @ {items[activeTab].name}
-                        </a>
-                      </h3>
-                      <p className={styles.dateRange}>{items[activeTab].period}</p>
-                      
-                      <ul className={styles.experienceList}>
-                        {items[activeTab].responsibilities.map((item, idx) => (
-                          <motion.li 
-                            key={idx} 
-                            className={styles.experienceItem}
-                            variants={itemVariants}
+                    items[activeTab].positions.map((position, posIdx) => (
+                      <div key={posIdx} className={posIdx ? styles.position : undefined}>
+                        <h3 className={styles.jobTitle}>
+                          {position.role}{" "}
+                          <a
+                            href={items[activeTab].website}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.companyLink}
                           >
-                            {item}
-                          </motion.li>
-                        ))}
-                      </ul>
-                    </>
+                            @ {items[activeTab].name}
+                          </a>
+                        </h3>
+                        <p className={styles.dateRange}>{position.period}</p>
+
+                        <ul className={styles.experienceList}>
+                          {position.responsibilities.map((item, idx) => (
+                            <motion.li
+                              key={idx}
+                              className={styles.experienceItem}
+                              variants={itemVariants}
+                            >
+                              {item}
+                            </motion.li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))
                   ) : (
                     <>
                       <h3 className={styles.degree}>{items[activeTab].degree}</h3>
